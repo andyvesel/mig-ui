@@ -34,7 +34,7 @@ import {
 } from "@patternfly/react-core";
 import { BellIcon, CogIcon } from "@patternfly/react-icons";
 import { css } from "@patternfly/react-styles";
-
+import { Link } from 'react-router-dom';
 class ConnectedHomePage extends React.Component<any, any> {
   constructor(props) {
     super(props);
@@ -187,25 +187,19 @@ class ConnectedHomePage extends React.Component<any, any> {
           <PageSection variant={PageSectionVariants.light}>
             <TextContent>
               <Text component="h1">Openshift Migration</Text>
-              <Text component="p">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at
-                felis eget justo pellentesque sagittis. In ut quam ac metus
-                laoreet facilisis. Vivamus iaculis diam at mauris viverra
-                dapibus. Proin sollicitudin luctus fermentum. Fusce luctus
-                ultrices suscipit. Curabitur sit amet imperdiet mi. Maecenas
-                odio elit, interdum ut volutpat at, malesuada id enim. Mauris
-                suscipit purus vitae erat feugiat efficitur. Etiam convallis,
-                turpis at scelerisque suscipit, est diam auctor sapien, vel
-                pretium turpis ipsum et sem.
-              </Text>
             </TextContent>
           </PageSection>
           <PageSection>
             <Gallery gutter="md">
-              {Array.apply(0, Array(10)).map((x, i) => (
+              {Array.apply(0, Array(3)).map((x, i) => (
                 <GalleryItem key={i}>
                   <Card>
-                    <CardBody>This is a card</CardBody>
+                    <KebabToggle/>
+                    <Link to='link'>
+                      <CardBody>
+                       { Card.name }
+                      </CardBody>
+                    </Link>
                   </Card>
                 </GalleryItem>
               ))}
