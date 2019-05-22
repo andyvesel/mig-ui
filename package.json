@@ -17,7 +17,8 @@
     "prep-remote": "./scripts/prep-remote.sh",
     "type-check": "tsc --noEmit",
     "type-check:watch": "npm run type-check -- --watch",
-    "test": "jest --rootDir=. --config=config/jest.config.js"
+    "test": "jest --rootDir=. --config=config/jest.config.js",
+    "cypress:open": "cypress open"
   },
   "devDependencies": {
     "@babel/core": "7.4.3",
@@ -76,6 +77,7 @@
     "axios": "0.18.0",
     "client-oauth2": "4.2.3",
     "connected-react-router": "6.3.2",
+    "cypress": "^3.3.0",
     "emotion": "10.0.9",
     "emotion-theming": "10.0.9",
     "history": "4.9.0",
